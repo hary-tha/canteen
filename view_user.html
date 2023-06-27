@@ -1,0 +1,38 @@
+{% extends "admin_base.html" %}
+{% block content %}
+<div class="container">
+  <a href="\add_user" class="btn btn-primary">Add User</a>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">UID</th>
+      <th scope="col">Admission No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Batch</th>
+      <th scope="col">Mobile No</th>
+      <th scope="col">Email ID</th>
+      <th scope="col">Password</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in res %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td><a href="/edit_user/{{i[0]}}" class="btn btn-success">Edit</a> <a href="/delete_user/{{i[0]}}" class="btn btn-danger">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+      </div>
+<body style="background-image:url('https://img.freepik.com/free-vector/white-background-with-shiny-lines-design_1017-28446.jpg?w=1380&t=st=1664207361~exp=1664207961~hmac=73166a5473caa99a3337fdb2fbd4a4d104e45d08ec7b3b1d452e03314291c7da'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

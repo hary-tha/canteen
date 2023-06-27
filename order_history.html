@@ -1,0 +1,37 @@
+{% extends "staff_base.html" %}
+{% block content %}
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Token No</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Quanity</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Order Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in res %}
+    <tr>
+      <th scope="row">{{i[8]}}</th>
+      <td>{{i[4]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[7]}}</td>
+      {% if i[9]==0 %}
+        <td>Pending</td>
+        {% elif i[9]==1 %}
+        <td>Payment Recieved</td>
+        {% elif i[9]==-1 %}
+        <td>Order Cancelled</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+<body style="background-image:url('https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1380&t=st=1664216036~exp=1664216636~hmac=47b6f1269f6f4d9aef9450ff1acc0e8738f53c9b32ccbf2cdd57a51c2ebd5844'); 
+background-size: 100%"></body>
+{% endblock %}

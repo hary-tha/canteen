@@ -1,0 +1,22 @@
+{% extends "staff_base.html" %}
+{% block content %}
+<div class="container">
+<form action="/add_item" method="POST">
+          <div class="form-group">
+              <label for="icode">Item Code</label>
+              <input type="text" class="form-control" placeholder="Enter Item Code" name="icode">
+          </div>
+          <div class="form-group">
+              <label for="iname">Item Name</label>
+              <input type="text" class="form-control" placeholder="Enter Item Name" name="iname">
+          </div>
+          <div class="form-group">
+            <label for="iprice">Item Price</label>
+            <input type="text" class="form-control" placeholder="Enter Item Price" name="iprice">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+<body style="background-image:url('https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1380&t=st=1664216036~exp=1664216636~hmac=47b6f1269f6f4d9aef9450ff1acc0e8738f53c9b32ccbf2cdd57a51c2ebd5844'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

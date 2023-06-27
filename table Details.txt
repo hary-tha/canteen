@@ -1,0 +1,36 @@
+User
+UID (Auto)
+Admission No - admno
+Name - unm
+Department - dept
+Batch - batch
+Mobile No - umob
+Email ID - uemail
+Password - upwd
+
+Staff
+SID (Auto)
+Name - snm
+Mobile no - smob
+Email ID - semail
+Username - sunm
+Password - spwd
+
+Item
+Item_ID (Auto)
+Item Code
+Item Name
+Price
+Quantity
+Date (Auto)
+
+Order
+order_id
+user_id
+user_name
+item_code
+item_name
+item_price
+item_qty
+order_date
+token_no

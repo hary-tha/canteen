@@ -1,0 +1,39 @@
+{% extends "admin_base.html" %}
+{% block content %}
+<div class="container">
+      <form action="/edit_user1" method="POST">
+            <input type="hidden" name="uid1" value="{{data[0][0]}}">
+          <div class="form-group">
+              <label for="admno">Admission No</label>
+              <input type="text" class="form-control" placeholder="Enter Admission No" name="admno"  value="{{data[0][1]}}">
+          </div>
+          <div class="form-group">
+              <label for="nm">Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name" name="unm" value="{{data[0][2]}}">
+          </div>
+          <div class="form-group">
+              <label for="dept">Department</label>
+              <input type="text" class="form-control" placeholder="Enter Department" name="dept" value="{{data[0][3]}}">
+          </div>
+          <div class="form-group">
+              <label for="batch">Batch</label>
+              <input type="text" class="form-control" placeholder="Enter Batch" name="batch" value="{{data[0][4]}}">
+          </div>
+          <div class="form-group">
+              <label for="mob">Mobile No</label>
+              <input type="text" class="form-control" placeholder="Enter Mobile No" name="umob" value="{{data[0][5]}}">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email" name="uemail" value="{{data[0][6]}}">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" name="upwd" value="{{data[0][7]}}">
+          </div>
+          <button type="submit" class="btn btn-success">Update</button>
+        </form>
+      </div>
+<body style="background-image:url('https://img.freepik.com/free-vector/white-background-with-shiny-lines-design_1017-28446.jpg?w=1380&t=st=1664207361~exp=1664207961~hmac=73166a5473caa99a3337fdb2fbd4a4d104e45d08ec7b3b1d452e03314291c7da'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

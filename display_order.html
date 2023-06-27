@@ -1,0 +1,30 @@
+{% extends "staff_base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Name of the Student: {{data[0][0][2]}}</h1>
+    <h1>Items Selected: </h1>
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Item Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data[0] %}
+      <tr>
+        <th scope="row">{{i[4]}}</th>
+        <td>{{i[5]}}</td>
+        <td>{{i[6]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <h1>Total Amount: {{data[1]}}</h1>
+  <a href="/accept_order/{{data[0][0][8]}}" class="btn btn-success">Accept</a>
+  <a href="/reject_order/{{data[0][0][8]}}" class="btn btn-danger">Reject</a>
+  </div>
+<body style="background-image:url('https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1380&t=st=1664216036~exp=1664216636~hmac=47b6f1269f6f4d9aef9450ff1acc0e8738f53c9b32ccbf2cdd57a51c2ebd5844'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

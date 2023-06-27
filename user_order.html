@@ -1,0 +1,40 @@
+{% extends "user_base.html" %}
+{% block content %}
+<div class="container">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Item Price</th>
+        <th scope="col">Available Quantity</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <th scope="row">{{i[2]}}</th>
+        <td>{{i[3]}}</td>
+        <td>{{i[5]}}</td>
+        <form action="/user_order1" method="POST">
+                  <input type="hidden" class="form-control" name="sid1" value="{{i[0]}}">
+                  <input type="hidden" class="form-control" name="iname" value="{{i[2]}}">
+        <td>        
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Enter Quantity" name="qty">
+            </div>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-success">Save</button>
+        </td>
+    </form>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/confirm_order" class="btn btn-primary">Submit</a>
+  </div>
+<body style="background-image:url('https://img.freepik.com/free-photo/flat-lay-food-frame-with-copy-space_23-2148723448.jpg?w=1060&t=st=1664220269~exp=1664220869~hmac=d2b61b6e94cbc5b0684372a0163c28a7e0e082ad50c384573d969790b37ac88b'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

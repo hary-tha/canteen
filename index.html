@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canteen Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="background-color:#09090b;">
+    <section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src = "{{url_for('static', filename='logoff.png')}}" style="width:400px;height:400px"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form action="/" method="POST">
+          <div class="divider d-flex align-items-center my-4">
+            <p style="color:white;" class="fw-bold mx-3 mb-0">LOGIN</p>
+          </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label style="color:white;" class="form-label" for="username">Username:</label>
+            <input type="text" name="unm" class="form-control form-control-lg"
+              placeholder="Enter Username" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label style="color:white;" class="form-label" for="password">Password:</label>
+            <input type="password" name="pwd" class="form-control form-control-lg"
+              placeholder="Enter Password" />
+            
+          </div>
+
+          
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <input type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Login">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    
+    <!-- Copyright -->
+    <center><div class="text-white mb-3 mb-md-0">
+      Copyright © 2022. All rights reserved.
+    </div></center>
+    <!-- Copyright -->
+
+<!--     Right -->
+<!--     <div>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="#!" class="text-white">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div> -->
+    <!-- Right -->
+  </div>
+</section>
+  </body>
+</html>

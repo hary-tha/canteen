@@ -1,0 +1,30 @@
+{% extends "admin_base.html" %}
+{% block content %}
+<div class="container">
+<form action="/add_staff" method="POST">
+          <div class="form-group">
+              <label for="nm">Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name" name="snm">
+          </div>
+          <div class="form-group">
+              <label for="mob">Mobile No</label>
+              <input type="text" class="form-control" placeholder="Enter Mobile No" name="smob">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email" name="semail">
+          </div>
+          <div class="form-group">
+              <label for="nm">Username</label>
+              <input type="text" class="form-control" placeholder="Enter Username" name="sunm">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" name="spwd">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+<body style="background-image:url('https://img.freepik.com/free-vector/white-background-with-shiny-lines-design_1017-28446.jpg?w=1380&t=st=1664207361~exp=1664207961~hmac=73166a5473caa99a3337fdb2fbd4a4d104e45d08ec7b3b1d452e03314291c7da'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "user_base.html" %}
+{% block content %}
+<div class="container">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in res %}
+      <tr>
+        <th scope="row">{{i[2]}}</th>
+        <td>{{i[1]}}</td>
+        <td><a href="/remove_order/{{i[0]}}" class="btn btn-Danger">Remove</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/user_order" class="btn btn-success">Add More</a>
+  <a href="/submit_order" class="btn btn-danger">Confirm</a>
+  </div>
+<body style="background-image:url('https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg?w=1380&t=st=1664221494~exp=1664222094~hmac=9ad2faccb205ede6fde731e41b40f18e6256901fb0c920106b8949c148a95655'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}

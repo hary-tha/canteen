@@ -1,0 +1,41 @@
+{% extends "staff_base.html" %}
+{% block content %}
+<div class="container">
+  <a href="/new_item" class="btn btn-primary">Add Item</a>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Item Code</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Item Price</th>
+      <th scope="col">Stock</th>
+      <th scope="col"></th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in res %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <form action="/item_stock" method="POST">
+                <input type="hidden" class="form-control" name="iid1" value="{{i[0]}}">
+      <td>        
+          <div class="form-group">
+              <input type="number" class="form-control" placeholder="Enter Stock" name="stk">
+          </div>
+      </td>
+      <td>
+        <button type="submit" class="btn btn-success">Update</button>
+      </td>
+  </form>
+      <td><a href="/edit_item/{{i[0]}}" class="btn btn-success">Edit</a> <a href="/delete_item/{{i[0]}}" class="btn btn-danger">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+<body style="background-image:url('https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1380&t=st=1664216036~exp=1664216636~hmac=47b6f1269f6f4d9aef9450ff1acc0e8738f53c9b32ccbf2cdd57a51c2ebd5844'); 
+background-repeat:no-repeat;background-size: 100%"></body>
+{% endblock %}
